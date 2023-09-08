@@ -13,7 +13,6 @@
     "@typescript-eslint/parser": "^6.6.0",
     "bun-types": "latest",
     "eslint": "^8.48.0",
-    "eslint-plugin-react": "^7.33.2",
     "typed-html": "^3.0.1"
   },
   "peerDependencies": {
