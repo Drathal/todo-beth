@@ -15,7 +15,7 @@
     "jsxFactory": "elements.createElement",
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "allowJs": true,
+    "allowJs": false,
     "types": [
       "bun-types" // add Bun global
     ]

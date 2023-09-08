@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "bun run --watch src/index.tsx",
+    "tsc": "tsc --noEmit --pretty",
     "lint": "eslint .",
     "format": "eslint --fix ."
   },
