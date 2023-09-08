@@ -2,12 +2,18 @@
   "name": "todo-beth",
   "module": "src/index.tsx",
   "type": "module",
-  "scripts":{
-    "dev": "bun run --watch src/index.tsx"
+  "scripts": {
+    "dev": "bun run --watch src/index.tsx",
+    "lint": "eslint .",
+    "format": "eslint --fix ."
   },
   "devDependencies": {
     "@types/node": "^20.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
     "bun-types": "latest",
+    "eslint": "^8.48.0",
+    "eslint-plugin-react": "^7.33.2",
     "typed-html": "^3.0.1"
   },
   "peerDependencies": {
@@ -18,5 +24,4 @@
     "@elysiajs/static": "^0.6.0",
     "elysia": "^0.6.19"
   }
-
 }

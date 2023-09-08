@@ -1,22 +1,15 @@
-import Elysia from "elysia";
-import { html } from "@elysiajs/html";
-import { staticPlugin } from "@elysiajs/static";
-import * as elements from "typed-html";
+import Elysia from 'elysia'
+import { html } from '@elysiajs/html'
+import { staticPlugin } from '@elysiajs/static'
+import * as elements from 'typed-html'
 
-import { BaseHtml } from "./components/BaseHtml";
-import { LoadApp } from "./components/LoadApp";
+import { Index } from './fragments/index'
 
 const app = new Elysia()
     .use(html())
     .use(staticPlugin({ prefix: '/public' }))
     /* @ts-ignore - ignore until elysiajs/html is fixed */
-    .get("/", ({ html })  => 
-        html(
-            <BaseHtml>
-                <LoadApp>loading...</LoadApp>
-            </BaseHtml>
-        )
-    )
-    .listen(3000);
+    .get('/', ({ html })  => html(<Index />))
+    .listen(3000)
 
-console.log(`🦊 Server is running at http://${app.server?.hostname}:${app.server?.port}`);
+console.log(`🦊 Server is running at http://${app.server?.hostname}:${app.server?.port}`)
