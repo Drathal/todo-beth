@@ -3,9 +3,11 @@
   "module": "src/index.tsx",
   "type": "module",
   "scripts": {
-    "dev": "bun --hot src/index.tsx",
+    "dev": "bun --watch src/index.tsx",
     "start": "bun run dist/index.js",
-    "build": "bun build ./src/index.tsx --outdir ./dist --target bun ",
+    "build": "npm run build:bun && npm run build:copy",
+    "build:bun": "bun build ./src/index.tsx --outdir ./dist --target bun ",
+    "build:copy": "cp -r ./public ./dist/public",
     "tsc": "tsc --noEmit --pretty",
     "lint": "eslint .",
     "format": "eslint --fix ."
