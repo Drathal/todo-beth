@@ -3,7 +3,9 @@
   "module": "src/index.tsx",
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch src/index.tsx",
+    "dev": "bun --hot src/index.tsx",
+    "start": "bun run dist/index.js",
+    "build": "bun build ./src/index.tsx --outdir ./dist --target bun ",
     "tsc": "tsc --noEmit --pretty",
     "lint": "eslint .",
     "format": "eslint --fix ."
