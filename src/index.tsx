@@ -1,7 +1,8 @@
 import Elysia from 'elysia'
 import { html } from '@elysiajs/html'
+import Html from '@kitajs/html'
 import { staticPlugin } from '@elysiajs/static'
-import * as elements from 'typed-html'
+
 
 import { Index } from './fragments/index'
 

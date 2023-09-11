@@ -1,4 +1,4 @@
-import * as elements from 'typed-html'
+import Html from '@kitajs/html'
 import { BaseHtml } from '../components/BaseHtml'
 import { LoadApp } from '../components/LoadApp'
 
