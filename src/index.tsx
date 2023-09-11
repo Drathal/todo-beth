@@ -1,6 +1,6 @@
+import '@kitajs/html/htmx'
 import Elysia from 'elysia'
 import { html } from '@elysiajs/html'
-import Html from '@kitajs/html'
 import { staticPlugin } from '@elysiajs/static'
 
 
