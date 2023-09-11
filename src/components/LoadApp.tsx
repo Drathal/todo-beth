@@ -6,5 +6,7 @@ export const LoadApp = ({ children }: Html.PropsWithChildren) => (
         hx-get="/todos"
         hx-swap="innerHTML"
         hx-trigger="load"
-    >{children}</body>
+    >
+        {children}
+    </body>
 )
