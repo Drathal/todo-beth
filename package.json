@@ -3,11 +3,14 @@
   "module": "src/index.tsx",
   "type": "module",
   "scripts": {
-    "dev": "bun --watch src/index.tsx",
-    "start": "bun run dist/index.js",
-    "build": "npm run build:bun && npm run build:copy",
-    "build:bun": "bun build ./src/index.tsx --outdir ./dist --target bun ",
+    "dev": "concurrently \"bun run dev:bun\" \"bun run dev:css\"",
+    "dev:bun": "bun --watch src/index.tsx",
+    "dev:css": "tailwindcss -i ./src/index.css -o ./public/index.css --watch",
+    "build": "bun run build:bun && bun run build:css && bun run build:copy",
+    "build:bun": "bun build ./src/index.tsx --outdir ./dist --target bun",
     "build:copy": "cp -r ./public ./dist/public",
+    "build:css": "tailwindcss -i ./src/index.css -o ./public/index.css",
+    "start": "bun run dist/index.js",
     "tsc": "tsc --noEmit --pretty",
     "lint": "eslint .",
     "format": "eslint --fix ."
@@ -17,10 +20,12 @@
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
     "bun-types": "latest",
+    "concurrently": "^8.2.1",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.3"
   },
   "peerDependencies": {
     "typescript": "^5.2.2"
