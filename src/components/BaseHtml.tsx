@@ -3,7 +3,7 @@ import Html from '@kitajs/html'
 export const BaseHtml = ({ children }: Html.PropsWithChildren) => (
     <>
         {'<!doctype html>'}
-        <html lang="en">
+        <html lang="en" class="dark">
             <head>
                 <meta charset="UTF-8" />
                 <meta
