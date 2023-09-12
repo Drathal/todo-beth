@@ -9,7 +9,7 @@
     "build": "bun run build:bun && bun run build:css && bun run build:copy",
     "build:bun": "bun build ./src/index.tsx --outdir ./dist --target bun",
     "build:copy": "cp -r ./public ./dist/public",
-    "build:css": "tailwindcss -i ./src/index.css -o ./public/index.css",
+    "build:css": "tailwindcss -i ./src/index.css -o ./public/index.css --minify",
     "start": "bun run dist/index.js",
     "tsc": "tsc --noEmit --pretty",
     "lint": "eslint .",
