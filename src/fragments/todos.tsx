@@ -178,6 +178,51 @@ export const Todos = () => (
                     </div>
                 </div>
             </li>
+
+            <li class="flex items-center justify-between p-4 mt-2 border border-gray-600 rounded-md">
+                <form method="POST" action="?/toggleTodo">
+                    <button
+                        type="submit"
+                        class="flex items-center justify-center px-1.5 py-1.5 text-sm font-medium text-gray-200 rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-white dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-3 h-3"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                        </svg>
+                    </button>
+                </form>
+
+                <button class="flex-auto mx-4 text-left p-1 text-gray-400 line-throug cursor-default">
+                    todo
+                </button>
+
+                <span class="px-2 mr-4 text-sm text-gray-200 rounded-full bg-lime-800">
+                    completed
+                </span>
+
+                <form method="POST" action="?/removeTodo">
+                    <input type="hidden" name="id" />
+                    <button
+                        type="submit"
+                        class="flex items-center justify-center px-1.5 py-1.5 text-sm font-medium text-gray-200 rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-700 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-3 h-3"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path d="M23 20.168l-8.185-8.187 8.185-8.174-2.832-2.807-8.182 8.179-8.176-8.179-2.81 2.81 8.186 8.196-8.186 8.184 2.81 2.81 8.203-8.192 8.18 8.192z" />
+                        </svg>
+                    </button>
+                </form>
+            </li>
         </ul>
     </section>
 )
